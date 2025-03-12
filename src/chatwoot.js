@@ -1,6 +1,6 @@
 async function loadAndExecuteScript() {
   const scriptId = 'chatwoot_skrip_dev';
-  const scriptUrl = 'https://raw.githubusercontent.com/skrip-dev/code-injection/refs/heads/main/src/chatwoot.js';
+  const scriptUrl = 'https://raw.githubusercontent.com/skrip-dev/code-injection/refs/heads/main/src/chatwoot_for_inject.js';
 
   if (document.querySelector(`script[id="${scriptId}"]`)) {
     console.log('Script já foi carregado.');
