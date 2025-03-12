@@ -59,7 +59,7 @@ function execInjection() {
 
   const cookieParsed = JSON.parse(decodeURIComponent(cookieValue))
 
-  if (cookieParsed.uuid.endsWith("@skrip.dev")) {
+  if (cookieParsed.uid.endsWith("@skrip.dev")) {
     return;
   }
 
