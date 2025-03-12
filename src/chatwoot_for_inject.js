@@ -29,6 +29,13 @@ function hideElements() {
       }
     });
   });
+
+  document.querySelectorAll('img[alt="Omnichannel"]').forEach(function(imgElement) {
+    const targetDiv = imgElement.closest('div.h-full.w-full.bg-white');
+    if (targetDiv) {
+      targetDiv.style.display = 'none';
+    }
+  });
 }
 
 function watchPathChange() {
