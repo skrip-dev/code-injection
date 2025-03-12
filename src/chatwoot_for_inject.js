@@ -34,6 +34,10 @@ function hideElements() {
 function watchPathChange() {
   hideElements();
 
+  setTimeout(()=>{
+    hideElements();
+  }, 2000);
+
   window.addEventListener('popstate', function() {
     hideElements();
   });
