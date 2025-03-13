@@ -36,6 +36,26 @@ function hideElements() {
       targetDiv.style.display = 'none';
     }
   });
+
+  if (window.location.pathname.endsWith('settings/inboxes/list')) {
+    document.querySelectorAll("main > div > div > div > div:nth-child(2) > table > tbody > tr > td:nth-child(2) > div > button").forEach(function(element) {
+      element.style.display = 'none';
+    });
+  }
+
+  const hasTabsUl = !!document.querySelector('ul.tabs');
+  const inInboxesSettings = window.location.pathname.includes('settings/inboxes');
+
+  if (inInboxesSettings && hasTabsUl) {
+    const element = document.querySelector('main > div > div.flex-grow.flex-shrink.w-full.min-w-0.pl-0.pr-0.overflow-auto.settings.bg-n-solid-1 > div.pt-4.pb-0.px-8.border-b.border-solid.border-n-weak\\/60 > div > ul > li:nth-child(2) > a');
+
+    if (element) {
+      element.click();
+    }
+
+    document.querySelector('ul.tabs').style.display = 'none';
+    document.querySelector('main > div > div.flex-grow.flex-shrink.w-full.min-w-0.pl-0.pr-0.overflow-auto.settings.bg-n-solid-1 > div.mx-8 > div > div:nth-child(2)').style.display = 'none';
+  }
 }
 
 function watchPathChange() {
