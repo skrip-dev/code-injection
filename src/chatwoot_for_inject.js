@@ -6,6 +6,8 @@ function getCookie(name) {
 }
 
 function hideElements() {
+  console.log('Executando hideElements');
+
   const selectors = [
     'li[name="Settings Inboxes"]',
     'li[name="Settings Agent Bots"]',
@@ -71,6 +73,7 @@ function execInjection() {
   const cookieParsed = JSON.parse(decodeURIComponent(cookieValue))
 
   if (cookieParsed.uid.endsWith("@skrip.dev")) {
+    console.log('Ignorando watchPathChange');
     return;
   }
 
