@@ -49,6 +49,7 @@ function watchPathChange() {
     hideElements();
   }, 2000);
 
+  /*
   window.addEventListener('popstate', function() {
     hideElements();
   });
@@ -63,7 +64,7 @@ function watchPathChange() {
   history.replaceState = function() {
     replaceState.apply(history, arguments);
     hideElements();
-  };
+  };*/
 }
 
 function execInjection() {
