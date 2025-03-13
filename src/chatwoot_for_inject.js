@@ -7,7 +7,7 @@ function getCookie(name) {
 
 function hideElements() {
   const selectors = [
-    'li[name="Settings Inboxes"]',
+    //'li[name="Settings Inboxes"]',
     'li[name="Settings Agent Bots"]',
     'li[name="Settings Automation"]',
     'li[name="Settings Macros"]',
