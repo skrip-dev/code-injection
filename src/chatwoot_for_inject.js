@@ -64,28 +64,33 @@ function hideElements() {
   }
 }
 
-function watchPathChange() {
+function hideElements2X() {
   hideElements();
-
+  setTimeout(()=>{
+    hideElements();
+  }, 1000);
   setTimeout(()=>{
     hideElements();
   }, 2000);
+}
 
+function watchPathChange() {
+  hideElements2X();
 
   window.addEventListener('popstate', function() {
-    hideElements();
+    hideElements2X();
   });
 
   const pushState = history.pushState;
   history.pushState = function() {
     pushState.apply(history, arguments);
-    hideElements();
+    hideElements2X();
   };
 
   const replaceState = history.replaceState;
   history.replaceState = function() {
     replaceState.apply(history, arguments);
-    hideElements();
+    hideElements2X();
   };
 }
 
