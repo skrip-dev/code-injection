@@ -7,14 +7,14 @@ function getCookie(name) {
 
 function hideElements() {
   const selectors = [
-    //'li[name="Settings Inboxes"]',
     'li[name="Settings Agent Bots"]',
     'li[name="Settings Automation"]',
     'li[name="Settings Macros"]',
     'li[name="Settings Integrations"]',
     'li[name="Reports Bot"]',
     'div[name="Portals"]',
-    'div[name="Campaigns"]'
+    'div[name="Campaigns"]',
+    'a[href="/app/accounts/2/settings/inboxes/new"]',
   ];
 
   selectors.forEach(function(selector) {
