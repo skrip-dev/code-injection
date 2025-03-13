@@ -77,4 +77,7 @@ function execInjection() {
   watchPathChange();
 }
 
-execInjection();
+setTimeout(()=>{
+  execInjection();
+}, 5000);
+
