@@ -14,6 +14,7 @@ function hideElements() {
     'li[name="Reports Bot"]',
     'div[name="Portals"]',
     'div[name="Campaigns"]',
+    'div[name="Captain"]',
     'a[href="/app/accounts/2/settings/inboxes/new"]',
   ];
 
