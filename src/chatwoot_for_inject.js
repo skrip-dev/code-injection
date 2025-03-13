@@ -65,13 +65,10 @@ function hideElements() {
 }
 
 function hideElements2X() {
-  hideElements();
-  setTimeout(()=>{
-    hideElements();
-  }, 1000);
-  setTimeout(()=>{
-    hideElements();
-  }, 2000);
+  const intervalId = setInterval(hideElements, 100);
+  setTimeout(() => {
+    clearInterval(intervalId);
+  }, 3000);
 }
 
 function watchPathChange() {
