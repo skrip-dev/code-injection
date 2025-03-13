@@ -1,6 +1,4 @@
 function getCookie(name) {
-  console.log('Executando getCookie');
-
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(';').shift();
@@ -8,8 +6,6 @@ function getCookie(name) {
 }
 
 function hideElements() {
-  console.log('Executando hideElements');
-
   const selectors = [
     'li[name="Settings Inboxes"]',
     'li[name="Settings Agent Bots"]',
@@ -43,15 +39,13 @@ function hideElements() {
 }
 
 function watchPathChange() {
-  console.log('Executando watchPathChange');
-
   hideElements();
 
   setTimeout(()=>{
     hideElements();
   }, 2000);
 
-  /*
+
   window.addEventListener('popstate', function() {
     hideElements();
   });
@@ -66,7 +60,7 @@ function watchPathChange() {
   history.replaceState = function() {
     replaceState.apply(history, arguments);
     hideElements();
-  };*/
+  };
 }
 
 function execInjection() {
@@ -85,7 +79,4 @@ function execInjection() {
   watchPathChange();
 }
 
-setTimeout(()=>{
-  execInjection();
-}, 5000);
-
+execInjection();
