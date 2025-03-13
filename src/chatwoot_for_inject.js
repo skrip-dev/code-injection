@@ -6,6 +6,7 @@ function getCookie(name) {
 }
 
 function hideElements() {
+  // Remove opcoes dos menus laterais
   const selectors = [
     'li[name="Settings Agent Bots"]',
     'li[name="Settings Automation"]',
@@ -17,7 +18,6 @@ function hideElements() {
     'div[name="Captain"]',
     'a[href="/app/accounts/2/settings/inboxes/new"]',
   ];
-
   selectors.forEach(function(selector) {
     document.querySelectorAll(selector).forEach(function(element) {
       if (element.tagName === 'DIV') {
@@ -31,6 +31,7 @@ function hideElements() {
     });
   });
 
+  // Apaga onboarding de criar nova caixa
   document.querySelectorAll('img[alt="Omnichannel"]').forEach(function(imgElement) {
     const targetDiv = imgElement.closest('div.h-full.w-full.bg-white');
     if (targetDiv) {
@@ -38,12 +39,14 @@ function hideElements() {
     }
   });
 
+  // Tira botao de deletar caixa
   if (window.location.pathname.endsWith('settings/inboxes/list')) {
     document.querySelectorAll("main > div > div > div > div:nth-child(2) > table > tbody > tr > td:nth-child(2) > div > button").forEach(function(element) {
       element.style.display = 'none';
     });
   }
 
+  // Oculta configuraçoes das caixas para mostrar somente gerecimaento de agentes
   const hasTabsUl = !!document.querySelector('ul.tabs');
   const inInboxesSettings = window.location.pathname.includes('settings/inboxes');
   if (inInboxesSettings && hasTabsUl) {
@@ -60,8 +63,15 @@ function hideElements() {
     }
   }
 
+  // Sai da tela de nova caixa se conseguiu clicar
   if (window.location.pathname.endsWith('settings/inboxes/new')) {
     window.location.pathname = '/';
+  }
+
+  // Remove IA do textarea do chat
+  const element = document.querySelector('div.flex.h-full.min-h-0.m-0 > div.flex.flex-col.justify-between.flex-grow.h-full.min-w-0.m-0 > div.conversation-footer.bg-n-background > div > div.flex.justify-between.p-3 > div.left-wrap > div:nth-child(6)');
+  if (element) {
+    element.style.display = 'none';
   }
 }
 
