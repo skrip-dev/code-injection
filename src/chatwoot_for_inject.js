@@ -41,6 +41,8 @@ function hideElements() {
 }
 
 function watchPathChange() {
+  console.log('Executando watchPathChange');
+
   hideElements();
 
   setTimeout(()=>{
