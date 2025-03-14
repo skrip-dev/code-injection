@@ -19,7 +19,7 @@ function hideElements() {
     'div[name="Portals"]',
     'div[name="Campaigns"]',
     'div[name="Captain"]',
-    'a[href="/app/accounts/2/settings/inboxes/new"]',
+    'a[href*="/app/accounts/"][href$="/settings/inboxes/new"]',
   ];
   selectors.forEach(function(selector) {
     document.querySelectorAll(selector).forEach(function(element) {
