@@ -53,7 +53,7 @@ function hideElements() {
   const hasTabsUl = !!document.querySelector('ul.tabs');
   const inInboxesSettings = window.location.pathname.includes('settings/inboxes');
   if (inInboxesSettings && hasTabsUl) {
-    const tabToSelect = document.querySelector('main > div > div.flex-grow.flex-shrink.w-full.min-w-0.pl-0.pr-0.overflow-auto.settings.bg-n-solid-1 > div.pt-4.pb-0.px-8.border-b.border-solid.border-n-weak\\/60 > div > ul > li:nth-child(2) > a');
+    const tabToSelect = document.querySelector('main > div > div > div.flex-grow.flex-shrink.w-full.min-w-0.pl-0.pr-0.overflow-auto.settings.px-5.flex-1.overflow-hidden > div > div > div > ul > li:nth-child(2) > a');
     if (tabToSelect) {
       tabToSelect.click();
     }
