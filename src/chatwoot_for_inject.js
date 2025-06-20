@@ -60,7 +60,7 @@ function hideElements() {
 
     document.querySelector('ul.tabs').style.display = 'none'
 
-    const attrConversation = document.querySelector('main > div > div.flex-grow.flex-shrink.w-full.min-w-0.pl-0.pr-0.overflow-auto.settings.bg-n-solid-1 > div.mx-8 > div > div:nth-child(2)');
+    const attrConversation = document.querySelector('main > div > div > div.flex-grow.flex-shrink.w-full.min-w-0.pl-0.pr-0.overflow-auto.settings.px-5.flex-1.overflow-hidden > section > div > div > div:nth-child(2)');
     if (attrConversation) {
       attrConversation.style.display = 'none';
     }
